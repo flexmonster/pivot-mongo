@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexmonster Pivot Table & Charts</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="flexmonster/flexmonster.min.css" rel="stylesheet">
+    <script src="flexmonster/flexmonster.full.js"></script>
+</head>
+
+<body>
+    <div id="pivot"></div>
+    <script type="text/javascript">
+        var pivot = new Flexmonster({
+            container: "#pivot",
+            height: 600,
+            toolbar: true,
+            report: {
+                "dataSource": {
+                    "type": "api",
+                    "url": "http://localhost:3100/mongo",
+                    "index": "smlTrades"
+                }
+            },
+            licenseKey: "Z78S-XB265Y-1A076J-3L3O3W"
+        });
+    </script>
+</body>
+
+</html>

@@ -17,6 +17,7 @@ const mongoController = __importStar(require("./controller/mongo"));
 const app = express_1.default();
 app.use(cors_1.default());
 app.use(body_parser_1.default.json());
+app.use(express_1.default.static('./'));
 app.use("/mongo", mongoController.default);
 const server = app.listen(3100, () => {
     console.log('Example app listening on port 3100!');

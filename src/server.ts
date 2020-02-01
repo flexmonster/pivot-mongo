@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 // app.get('/', function (req, res) {
 //   res.send('Hello World!');
 // });
-
+app.use(express.static('./'));
 app.use("/mongo", mongoController.default);
 
 const server = app.listen(3100, () => {
