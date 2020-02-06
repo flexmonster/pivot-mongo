@@ -14,12 +14,12 @@ const mongodb_1 = require("mongodb");
 const flexmonster_mongo_connector_1 = require("flexmonster-mongo-connector");
 let dbo = null;
 let _apiReference = null;
-mongodb_1.MongoClient.connect("mongodb://localhost:27017/testDB", {
+mongodb_1.MongoClient.connect('mongodb://read:only@olap.flexmonster.com:27017', {
     useNewUrlParser: true
 }, (err, db) => {
     if (err)
         throw err;
-    dbo = db.db("testDB");
+    dbo = db.db("flexmonster");
     _apiReference = new flexmonster_mongo_connector_1.MongoDataAPI();
 });
 const mongo = express_1.Router();
