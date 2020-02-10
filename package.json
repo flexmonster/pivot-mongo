@@ -11,9 +11,9 @@
         "serve": "node build/server.js"
     },
     "author": "Flexmonater",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
-        "flexmonster-mongo-connector": "0.0.2-beta"
+        "flexmonster-mongo-connector": "^2.8.0"
     },
     "devDependencies": {
         "@types/cors": "^2.8.6",

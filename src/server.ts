@@ -8,19 +8,13 @@ import * as mongoController from "./controller/mongo";
 const app: express.Application = express();
 
 app.use(cors());
-// app.use(bodyParser.urlencoded({
-// 	extended: false
-// }));
+
 app.use(bodyParser.json());
 
-// app.get('/', function (req, res) {
-//   res.send('Hello World!');
-// });
-app.use(express.static('./'));
 app.use("/mongo", mongoController.default);
 
-const server = app.listen(3100, () => {
-  console.log('Example app listening on port 3100!');
+const server = app.listen(9204, () => {
+  console.log('Example app listening on port 9204!');
 });
 
 export default server;
