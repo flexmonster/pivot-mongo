@@ -6,7 +6,7 @@
     "scripts": {
         "start": "npm run serve",
         "start-dev": "nodemon --config \"./nodemon.json\"/",
-        "build": "rmdir /S /Q \"build/\" && tsc",
+        "build": "tsc",
         "build-ts": "tsc",
         "serve": "node build/server.js"
     },
