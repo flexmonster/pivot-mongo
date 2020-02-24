@@ -25,7 +25,6 @@ mongo.post("/", async (req: Request, res: Response) => {
         switch (req.body.type) {
 			case "fields":
 				result = await _apiReference.getSchema(dbo, req.body.index);
-                result = result.toJSON();
 				break;
 			case "members":
                 result = await _apiReference.getMembers(dbo, req.body.index, req.body.field, req.body.page);
@@ -62,7 +61,7 @@ mongo.post("/handshake", async (req: Request, res: Response) => {
 mongo.post("/fields", async (req: Request, res: Response) => {
 	try {
         const result = await _apiReference.getSchema(dbo, req.body.index);
-        res.json(result.toJSON());
+        res.json(result);
     } catch (err) {
         handleError(err, res);
     }
