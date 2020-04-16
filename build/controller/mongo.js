@@ -29,7 +29,6 @@ mongo.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         switch (req.body.type) {
             case "fields":
                 result = yield _apiReference.getSchema(dbo, req.body.index);
-                result = result.toJSON();
                 break;
             case "members":
                 result = yield _apiReference.getMembers(dbo, req.body.index, req.body.field, req.body.page);
@@ -56,7 +55,7 @@ mongo.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 }));
 mongo.post("/handshake", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json(null);
+        res.json({ version: _apiReference.API_VERSION });
     }
     catch (err) {
         handleError(err, res);
@@ -65,7 +64,7 @@ mongo.post("/handshake", (req, res) => __awaiter(void 0, void 0, void 0, functio
 mongo.post("/fields", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const result = yield _apiReference.getSchema(dbo, req.body.index);
-        res.json(result.toJSON());
+        res.json(result);
     }
     catch (err) {
         handleError(err, res);

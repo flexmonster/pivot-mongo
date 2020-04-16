@@ -13,7 +13,7 @@
     "author": "Flexmonater",
     "license": "MIT",
     "dependencies": {
-        "flexmonster-mongo-connector": "^2.8.1"
+        "flexmonster-mongo-connector": "^2.8.5-1"
     },
     "devDependencies": {
         "@types/cors": "^2.8.6",

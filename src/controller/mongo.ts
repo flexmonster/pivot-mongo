@@ -52,7 +52,7 @@ mongo.post("/", async (req: Request, res: Response) => {
 
 mongo.post("/handshake", async (req: Request, res: Response) => {
 	try {
-        res.json(null);
+        res.json({ version: _apiReference.API_VERSION });
     } catch (err) {
         handleError(err, res);
     }
