@@ -10,7 +10,7 @@
         "build-ts": "tsc",
         "serve": "node build/server.js"
     },
-    "author": "Flexmonater",
+    "author": "Flexmonster",
     "license": "MIT",
     "dependencies": {
         "flexmonster-mongo-connector": "latest"
