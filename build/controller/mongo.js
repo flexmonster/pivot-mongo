@@ -72,7 +72,7 @@ mongo.post("/fields", (req, res) => __awaiter(void 0, void 0, void 0, function* 
 }));
 mongo.post("/members", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const result = yield _apiReference.getMembers(dbo, req.body.index, req.body.field, { page: req.body.page, pageToken: req.body.pageToken });
+        const result = yield _apiReference.getMembers(dbo, req.body.index, { "field": req.body.field, "filter": req.body.filter }, { page: req.body.page, pageToken: req.body.pageToken });
         res.json(result);
     }
     catch (err) {

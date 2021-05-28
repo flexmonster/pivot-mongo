@@ -13,9 +13,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
+const compression_1 = __importDefault(require("compression"));
 const mongoController = __importStar(require("./controller/mongo"));
 const app = express_1.default();
 app.use(cors_1.default());
+app.use(compression_1.default());
 app.use(body_parser_1.default.json());
 app.use("/mongo", mongoController.default);
 const server = app.listen(9204, () => {

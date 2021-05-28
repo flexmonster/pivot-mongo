@@ -69,7 +69,7 @@ mongo.post("/fields", async (req: Request, res: Response) => {
 
 mongo.post("/members", async (req: Request, res: Response) => {
     try {
-        const result = await _apiReference.getMembers(dbo, req.body.index, req.body.field, {page: req.body.page, pageToken: req.body.pageToken});
+        const result = await _apiReference.getMembers(dbo, req.body.index, {"field": req.body.field, "filter": req.body.filter}, {page: req.body.page, pageToken: req.body.pageToken});
         res.json(result);
     } catch (err) {
         handleError(err, res);

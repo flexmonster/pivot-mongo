@@ -13,7 +13,9 @@
     "author": "Flexmonster",
     "license": "MIT",
     "dependencies": {
-        "flexmonster-mongo-connector": "latest"
+        "@types/compression": "^1.7.0",
+        "compression": "^1.7.4",
+        "flexmonster-mongo-connector": "^2.9.0-beta.1"
     },
     "devDependencies": {
         "@types/cors": "^2.8.6",
