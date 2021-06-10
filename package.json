@@ -1,6 +1,6 @@
 {
     "name": "flexmonster-mongo-api",
-    "version": "2.8.0",
+    "version": "2.9.0",
     "description": "Custom data source API implementation for MongoDB",
     "main": "build/server.js",
     "scripts": {
@@ -15,7 +15,7 @@
     "dependencies": {
         "@types/compression": "^1.7.0",
         "compression": "^1.7.4",
-        "flexmonster-mongo-connector": "^2.9.0-beta.1"
+        "flexmonster-mongo-connector": "latest"
     },
     "devDependencies": {
         "@types/cors": "^2.8.6",
