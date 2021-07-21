@@ -14,7 +14,7 @@ This repository holds the source code for a project demonstrating how to connect
 
 ## Prerequisites
 
-To run the project, you will need Node.js and npm. [Get it here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if it's not already installed on your machine.
+To run the project, you will need Node.js and npm. [Get them here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if they're not already installed on your machine.
 
 ## Installation
 
