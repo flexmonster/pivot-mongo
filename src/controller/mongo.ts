@@ -5,9 +5,8 @@ import {Db} from 'mongodb';
 
 let dbo: Db = null;
 let _apiReference: MongoDataAPI = null;
-MongoClient.connect('mongodb://read:only@olap.flexmonster.com:27017', { 
-    useNewUrlParser: true
-}, (err, db) => {
+MongoClient.connect('mongodb://read:only@olap.flexmonster.com:27017', 
+(err, db) => {
 	if (err) throw err;
 	dbo = db.db("flexmonster");
 	_apiReference = new MongoDataAPI();
