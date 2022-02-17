@@ -15,7 +15,7 @@
     "dependencies": {
         "@types/compression": "^1.7.0",
         "compression": "^1.7.4",
-        "flexmonster-mongo-connector": "file:./flexmonster-mongodb-connector/"
+        "flexmonster-mongo-connector": "latest"
     },
     "devDependencies": {
         "@types/cors": "^2.8.6",
