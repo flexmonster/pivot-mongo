@@ -5,7 +5,8 @@ import {Db} from 'mongodb';
 
 let dbo: Db = null;
 let _apiReference: MongoDataAPI = null;
-MongoClient.connect('mongodb://read:only@olap.flexmonster.com:27017', { }, (err, db) => {
+MongoClient.connect('mongodb://read:only@olap.flexmonster.com:27017', 
+(err, db) => {
 	if (err) throw err;
 	dbo = db.db("flexmonster");
 	_apiReference = new MongoDataAPI();
@@ -67,7 +68,7 @@ mongo.post("/fields", async (req: Request, res: Response) => {
 
 mongo.post("/members", async (req: Request, res: Response) => {
     try {
-        const result = await _apiReference.getMembers(dbo, req.body.index, req.body.field, {page: req.body.page, pageToken: req.body.pageToken});
+        const result = await _apiReference.getMembers(dbo, req.body.index, {"field": req.body.field, "filter": req.body.filter}, {page: req.body.page, pageToken: req.body.pageToken});
         res.json(result);
     } catch (err) {
         handleError(err, res);
