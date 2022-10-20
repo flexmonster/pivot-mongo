@@ -1,7 +1,6 @@
 import {Request, Response, Router } from "express";
-import {MongoClient} from "mongodb";
+import {Db, MongoClient} from "mongodb";
 import {MongoDataAPI} from 'flexmonster-mongo-connector';
-import {Db} from 'mongodb';
 
 let dbo: Db = null;
 let _apiReference: MongoDataAPI = null;
