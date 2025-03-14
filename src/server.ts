@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use("/mongo", mongoController.default);
 
 const server = app.listen(9204, () => {
-  console.log('Example app listening on port 9204!');
+  console.log('The server is listening at http://localhost:9204');
 });
 
 export default server;
