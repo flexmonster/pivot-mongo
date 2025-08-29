@@ -38,10 +38,9 @@ npm install
 3. Run the sample project:
 
 ```bash
-npm run build
-npm run start
+npm run build && npm run start
 ```
-To see the result, open `http://localhost:9204/` in your browser.
+To see the result, open the `client/index.html` file in your browser.
 
 ## Related Flexmonster docs
  
